@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ making api requests to get specific data"""
 import requests
-import json
 from sys import argv
 
 if __name__ == "__main__":
@@ -17,12 +16,10 @@ if __name__ == "__main__":
     count = 0
     task_completed = []
 
-    # Getting user name
+
     for user in user_response:
         if user['id'] == user_id:
             user_name = user['name']
-    print(user_name)
-    #create list of users wit id and name
 
     for task in todo_response:
         if task['userId'] == user_id:
