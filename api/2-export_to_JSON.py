@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """ making api requests to get specific data"""
 
-import csv
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     user_id = eval(argv[1])
