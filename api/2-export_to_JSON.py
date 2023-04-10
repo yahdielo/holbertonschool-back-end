@@ -16,7 +16,8 @@ if __name__ == "__main__":
     _response = requests.get(todo_url)
     todo_response = _response.json()
     user_response = response.json()
-    dict_of_task = []
+    d_task = {}
+    list_of_task = []
     full_dict = {}
 
     for user in user_response:
@@ -25,11 +26,14 @@ if __name__ == "__main__":
 
     for task in todo_response:
         if task['userId'] == user_id:
-            full_dict = {'task': task['title'],
+            d_task = {'task': task['title'],
                          'completed': task['completed'],
                          'username': user_name}
-            dict_of_task.append(full_dict)
+            list_of_task.append(d_task)
+
+    
+    full_dict[user_id] = list_of_task
 
     with open(f'{user_id}.json', 'w') as f:
 
-        json.dump(dict_of_task, f)
+        json.dump(full_dict, f)
