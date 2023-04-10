@@ -16,7 +16,6 @@ if __name__ == "__main__":
     count = 0
     task_completed = []
 
-
     for user in user_response:
         if user['id'] == user_id:
             user_name = user['name']
@@ -30,7 +29,3 @@ if __name__ == "__main__":
     print(f'Employee {user_name} is done with tasks({count}/20):')
     for i in task_completed:
         print(f'\t {i}')
-
-
-
-
