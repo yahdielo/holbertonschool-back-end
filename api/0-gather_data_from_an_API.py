@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" making api requests to get specific data"""
 import requests
 import json
 from sys import argv
