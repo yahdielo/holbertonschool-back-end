@@ -8,7 +8,6 @@ from sys import argv
 if __name__ == "__main__":
     user_id = eval(argv[1])
 
-
     user_url = "https://jsonplaceholder.typicode.com/users"
     todo_url = "https://jsonplaceholder.typicode.com/todos"
 
