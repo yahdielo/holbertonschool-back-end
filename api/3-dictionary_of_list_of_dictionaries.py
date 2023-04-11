@@ -27,7 +27,7 @@ if __name__ == "__main__":
                             'completed': task['completed'],
                             'username': user_name}
                 list_of_task.append(d_task)
-        full_dict.update({user_id: dict_list})
+        full_dict.update({user_id: list_of_task})
 
 
     with open('todo_all_employees.json', 'w') as f:
