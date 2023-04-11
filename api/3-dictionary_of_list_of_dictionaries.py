@@ -18,7 +18,7 @@ if __name__ == "__main__":
     full_dict = {}
 
     for user in user_response:
-        list_of_task = []
+        
         user_id = user['id']
         user_name = user['username']
         for task in todo_response:
