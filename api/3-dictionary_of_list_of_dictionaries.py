@@ -24,11 +24,10 @@ if __name__ == "__main__":
         for task in todo_response:
             if task['userId'] == user_id:
                 d_task = {'task': task['title'],
-                            'completed': task['completed'],
-                            'username': user_name}
+                          'completed': task['completed'],
+                          'username': user_name}
                 list_of_task.append(d_task)
         full_dict.update({user_id: list_of_task})
-
 
     with open('todo_all_employees.json', 'w') as f:
 
