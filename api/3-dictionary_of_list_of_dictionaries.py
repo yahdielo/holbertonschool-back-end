@@ -23,10 +23,10 @@ if __name__ == "__main__":
         user_name = user['username']
         for task in todo_response:
             if task['userId'] == user_id:
-            d_task = {'task': task['title'],
-                        'completed': task['completed'],
-                        'username': user_name}
-            list_of_task.append(d_task)
+                d_task = {'task': task['title'],
+                            'completed': task['completed'],
+                            'username': user_name}
+                list_of_task.append(d_task)
         full_dict.update({user_id: dict_list})
 
 
